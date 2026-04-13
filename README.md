@@ -29,9 +29,9 @@ Observação: este workspace já inclui tarefas do VS Code que usam `${env:USERP
 
 Exemplo (já presente no repositório):
 ```
-#define WIFI_SSID "CLARO_2G085"
-#define WIFI_PASS "yX@4pZ!wQ8#rD2"
-#define SERVER_IP "192.168.0.252"
+#define WIFI_SSID "NOME_WIFI"
+#define WIFI_PASS "SENHA_WIFI"
+#define SERVER_IP "IP_SERVIDOR"
 #define SERVER_PORT 5000
 ```
 
@@ -81,13 +81,3 @@ Observação: a workspace contém um `pico_enable_stdio_usb(SnakeGame_PicoW 1)`,
 ## Solução de problemas
 - Se o Pico não conectar ao Wi‑Fi: verifique SSID/senha, e mensagens no serial (há prints em `wifi_client.c`).
 - Se o servidor não receber pacotes: verifique `SERVER_IP` (use IP do PC), desative temporariamente firewall ou libere UDP/porta.
-- Se o build falhar: cole o log do `Compile Project` aqui e eu ajudo a diagnosticar (erros comuns: toolchain ausente, `PICO_SDK_PATH` não configurado).
-
-## Observações finais
-- As credenciais Wi‑Fi estão armazenadas em texto claro para facilitar testes — não utilizar em produção.
-- Se quiser, eu posso:
-  - Compilar o projeto aqui e trazer o log; ou
-  - Ajustar o `relatorio.tex` para seguir estritamente o template do PDF (se houver instruções adicionais).
-
----
-Para qualquer passo adicional ou erro, cole o log/print aqui e eu continuo ajudando.
